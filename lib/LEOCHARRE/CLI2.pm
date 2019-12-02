@@ -212,7 +212,7 @@ sub import_make_opts {
 
 # ARGV ----- begin
 sub _argv {
-   defined %ARGV or _init_argv();
+   %ARGV or _init_argv();
    if (my $key = shift){
       return $ARGV{$key};
    }
